@@ -1,7 +1,7 @@
 const searchResult = document.getElementById('search')
 const searchMsg = document.getElementById('search-msg');
 const mealElement = document.getElementById('meals')
-const singleMeal = document.getElementById('single-meal')
+const mealDetail = document.getElementById('meal-detail')
 
 const searchValue = () => {
     const searchVal = searchResult.value
@@ -22,13 +22,14 @@ const searchValue = () => {
             <h3>${meal.strMeal}</h3>
             </div>
             `).join("")
+            mealDetail.style.display='none'
             }
         })
     search.value = "";
 }
 
 const displayFoodIngredients = id => {
-
+    mealDetail.style.display='block'
     console.log(id);
 
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
@@ -41,7 +42,7 @@ const displayFoodIngredients = id => {
 }
 
 const renderIngredients = ingred => {
-    singleMeal.innerHTML = `
+    mealDetail.innerHTML = `
     <div class="single-meal">
     <h1>${ingred.strMeal}</h1>
     <img src="${ingred.strMealThumb}"/>
