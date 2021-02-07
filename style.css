@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: whitesmoke;
+    margin: 0px;
+}
+
+.container{
+    margin:auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#meals{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+#meals img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+#meals h3{
+    background: lightgray;
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+
+.meal{
+    border: 5px solid darkgray;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
