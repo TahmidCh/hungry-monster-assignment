@@ -22,14 +22,15 @@ const searchValue = () => {
             <h3>${meal.strMeal}</h3>
             </div>
             `).join("")
-            mealDetail.style.display='none'
+
             }
         })
+    mealDetail.style.display = 'none'
     search.value = "";
 }
 
 const displayFoodIngredients = id => {
-    mealDetail.style.display='block'
+    mealDetail.style.display = 'block'
     console.log(id);
 
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
